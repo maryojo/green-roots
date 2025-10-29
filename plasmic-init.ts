@@ -9,6 +9,7 @@ import {
   SupabaseStorageGetSignedUrl,
   SupabaseStorageGetSignedUrlMeta,
 } from "plasmic-supabase";
+import { registerAll } from "@plasmicpkgs/plasmic-chakra-ui";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -33,7 +34,7 @@ export const PLASMIC = initPlasmicLoader({
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // PLASMIC.registerComponent(...);
-
+registerAll(PLASMIC);
 PLASMIC.registerGlobalContext(SupabaseUserGlobalContext, SupabaseUserGlobalContextMeta)
 
 //Register components
